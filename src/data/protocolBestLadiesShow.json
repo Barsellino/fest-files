@@ -1,0 +1,91 @@
+{
+  "tournament": {
+    "id": "femme-fest-2026-05-10-best-ladies-show",
+    "name": "FEMME FEST",
+    "date": "2026-05-10",
+    "dateLabel": "10.05.2026",
+    "category": "Best Ladies Show / Crew 4+ / All ages / Skilled - Best Ladies Show",
+    "discipline": "Best Ladies Show",
+    "format": "Crew 4+",
+    "ageGroup": "All ages",
+    "level": "Skilled",
+    "headOfScoringCommission": "Костенко Владислав",
+    "participantCount": 8,
+    "studioCount": 7,
+    "cityCount": 4,
+    "sourcePdf": "Протокол_Best_Ladies_Show_Crew_4_All_ages_Skilled_Best_Ladies_Show.pdf",
+    "locale": "uk"
+  },
+  "criteria": [
+    { "id": "technique", "label": "Техніка" },
+    { "id": "show", "label": "Шоу" },
+    { "id": "musicality", "label": "Музичність" },
+    { "id": "image", "label": "Образ" }
+  ],
+  "judges": [
+    { "id": "judge-leyla", "name": "Лейла" },
+    { "id": "judge-diezel", "name": "Diezel" },
+    { "id": "judge-gladkaya", "name": "Gladkaya" },
+    { "id": "judge-kate-gladkova", "name": "Kate Gladkova" }
+  ],
+  "participants": [
+    { "id": "p-305", "name": "Divchata" },
+    { "id": "p-29", "name": "Foxes Divas — Лютий кайф" },
+    { "id": "p-201", "name": "THE ЧАЙКИ — Перше правило Бійцівського клубу" },
+    { "id": "p-236", "name": "M.G.L. Crew" },
+    { "id": "p-56", "name": "PTM SQUAD GET BACK" },
+    { "id": "p-149", "name": "GROOVE SQUAD" },
+    { "id": "p-57", "name": "D/TENSION ALL DAY ALL NIGHT" },
+    { "id": "p-233", "name": "Mova" }
+  ],
+  "scores": {
+    "p-29": {
+      "judge-leyla": { "technique": 9, "show": 10, "musicality": 9, "image": 9 },
+      "judge-diezel": { "technique": 9, "show": 10, "musicality": 9.5, "image": 10 },
+      "judge-gladkaya": { "technique": 9.5, "show": 10, "musicality": 10, "image": 10 },
+      "judge-kate-gladkova": { "technique": 9, "show": 10, "musicality": 9.5, "image": 10 }
+    },
+    "p-56": {
+      "judge-leyla": { "technique": 8, "show": 10, "musicality": 9, "image": 10 },
+      "judge-diezel": { "technique": 7.5, "show": 9, "musicality": 7.5, "image": 9.5 },
+      "judge-gladkaya": { "technique": 9, "show": 10, "musicality": 9, "image": 10 },
+      "judge-kate-gladkova": { "technique": 9, "show": 9.5, "musicality": 8, "image": 9.5 }
+    },
+    "p-57": {
+      "judge-leyla": { "technique": 7.7, "show": 8.5, "musicality": 8.5, "image": 9 },
+      "judge-diezel": { "technique": 7.5, "show": 8.3, "musicality": 8, "image": 9 },
+      "judge-gladkaya": { "technique": 8, "show": 8.8, "musicality": 9, "image": 9 },
+      "judge-kate-gladkova": { "technique": 7.5, "show": 9, "musicality": 7, "image": 9 }
+    },
+    "p-149": {
+      "judge-leyla": { "technique": 8.5, "show": 9, "musicality": 9, "image": 10 },
+      "judge-diezel": { "technique": 6.5, "show": 6.7, "musicality": 7.2, "image": 8.2 },
+      "judge-gladkaya": { "technique": 8.7, "show": 9, "musicality": 9, "image": 9 },
+      "judge-kate-gladkova": { "technique": 8.7, "show": 8, "musicality": 8.5, "image": 9 }
+    },
+    "p-201": {
+      "judge-leyla": { "technique": 9, "show": 10, "musicality": 10, "image": 10 },
+      "judge-diezel": { "technique": 7.5, "show": 10, "musicality": 9, "image": 9 },
+      "judge-gladkaya": { "technique": 9, "show": 9, "musicality": 10, "image": 10 },
+      "judge-kate-gladkova": { "technique": 9.5, "show": 10, "musicality": 9.4, "image": 10 }
+    },
+    "p-233": {
+      "judge-leyla": { "technique": 7, "show": 7, "musicality": 8, "image": 9 },
+      "judge-diezel": { "technique": 6.3, "show": 7, "musicality": 6, "image": 8 },
+      "judge-gladkaya": { "technique": 7.5, "show": 8, "musicality": 7.5, "image": 9 },
+      "judge-kate-gladkova": { "technique": 7.5, "show": 8, "musicality": 7, "image": 9 }
+    },
+    "p-236": {
+      "judge-leyla": { "technique": 8.8, "show": 10, "musicality": 10, "image": 10 },
+      "judge-diezel": { "technique": 7.2, "show": 8, "musicality": 9, "image": 7 },
+      "judge-gladkaya": { "technique": 9.5, "show": 10, "musicality": 10, "image": 10 },
+      "judge-kate-gladkova": { "technique": 9.7, "show": 10, "musicality": 10, "image": 9 }
+    },
+    "p-305": {
+      "judge-leyla": { "technique": 8.9, "show": 10, "musicality": 10, "image": 10 },
+      "judge-diezel": { "technique": 9, "show": 10, "musicality": 10, "image": 10 },
+      "judge-gladkaya": { "technique": 9.7, "show": 10, "musicality": 10, "image": 10 },
+      "judge-kate-gladkova": { "technique": 9.5, "show": 10, "musicality": 10, "image": 10 }
+    }
+  }
+}

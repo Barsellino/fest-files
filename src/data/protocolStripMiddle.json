@@ -1,0 +1,511 @@
+{
+  "tournament": {
+    "id": "femme-fest-2026-05-10-strip-middle",
+    "name": "FEMME FEST",
+    "date": "2026-05-10",
+    "dateLabel": "10.05.2026",
+    "category": "Strip / Solo / Adults (15+ років) / Middle - Strip",
+    "discipline": "Strip",
+    "format": "Solo",
+    "ageGroup": "Adults (15+ років)",
+    "level": "Middle",
+    "headOfScoringCommission": "Костенко Владислав",
+    "participantCount": 19,
+    "studioCount": 7,
+    "cityCount": 8,
+    "sourcePdf": "Протокол_Strip_Solo_Adults_15_років_Middle_Strip.pdf",
+    "locale": "uk"
+  },
+  "criteria": [
+    {
+      "id": "technique",
+      "label": "Техніка"
+    },
+    {
+      "id": "show",
+      "label": "Шоу"
+    },
+    {
+      "id": "musicality",
+      "label": "Музичність"
+    },
+    {
+      "id": "image",
+      "label": "Образ"
+    }
+  ],
+  "judges": [
+    {
+      "id": "judge-leyla",
+      "name": "Лейла"
+    },
+    {
+      "id": "judge-kate",
+      "name": "Kate Gladkova"
+    },
+    {
+      "id": "judge-marina",
+      "name": "Marina"
+    }
+  ],
+  "participants": [
+    {
+      "id": "p-124",
+      "name": "Anastasiia Molly"
+    },
+    {
+      "id": "p-134",
+      "name": "Борисенко Дарʼя"
+    },
+    {
+      "id": "p-135",
+      "name": "Богомаз Аліна"
+    },
+    {
+      "id": "p-136",
+      "name": "Антонюк Валерія"
+    },
+    {
+      "id": "p-141",
+      "name": "Котова Юлія"
+    },
+    {
+      "id": "p-180",
+      "name": "Литвиненко Мілана"
+    },
+    {
+      "id": "p-196",
+      "name": "Саракуз Тетяна (Kuzara Демони)"
+    },
+    {
+      "id": "p-198",
+      "name": "Литвиненко Валерія"
+    },
+    {
+      "id": "p-208",
+      "name": "Никоненко Софія"
+    },
+    {
+      "id": "p-211",
+      "name": "Маріама Діалло (Марсіанка)"
+    },
+    {
+      "id": "p-220",
+      "name": "Гурова Марина"
+    },
+    {
+      "id": "p-229",
+      "name": "Сокіран Вікторія"
+    },
+    {
+      "id": "p-235",
+      "name": "Пашуба Таїсія"
+    },
+    {
+      "id": "p-242",
+      "name": "Сябро Ольга"
+    },
+    {
+      "id": "p-259",
+      "name": "Рєзвих Світлана"
+    },
+    {
+      "id": "p-265",
+      "name": "Редіна Тетяна"
+    },
+    {
+      "id": "p-274",
+      "name": "Кислиця Анастасія"
+    },
+    {
+      "id": "p-302",
+      "name": "Вербич Вікторія"
+    },
+    {
+      "id": "p-309",
+      "name": "Подюк Марина"
+    }
+  ],
+  "scores": {
+    "p-124": {
+      "judge-leyla": {
+        "technique": 6,
+        "show": 8.8,
+        "musicality": 7,
+        "image": 9
+      },
+      "judge-kate": {
+        "technique": 6.8,
+        "show": 8.3,
+        "musicality": 7,
+        "image": 8.9
+      },
+      "judge-marina": {
+        "technique": 8,
+        "show": 9,
+        "musicality": 8.5,
+        "image": 10
+      }
+    },
+    "p-134": {
+      "judge-leyla": {
+        "technique": 4.9,
+        "show": 6.9,
+        "musicality": 4.7,
+        "image": 7
+      },
+      "judge-kate": {
+        "technique": 6,
+        "show": 7,
+        "musicality": 6,
+        "image": 7
+      },
+      "judge-marina": {
+        "technique": 7.4,
+        "show": 7.7,
+        "musicality": 7.3,
+        "image": 8
+      }
+    },
+    "p-135": {
+      "judge-leyla": {
+        "technique": 6,
+        "show": 5,
+        "musicality": 6.8,
+        "image": 8
+      },
+      "judge-kate": {
+        "technique": 6.6,
+        "show": 7,
+        "musicality": 7,
+        "image": 7.5
+      },
+      "judge-marina": {
+        "technique": 7.9,
+        "show": 7.8,
+        "musicality": 8,
+        "image": 8
+      }
+    },
+    "p-136": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 7.9,
+        "musicality": 8,
+        "image": 8.4
+      },
+      "judge-kate": {
+        "technique": 7.5,
+        "show": 7.7,
+        "musicality": 7.9,
+        "image": 8.8
+      },
+      "judge-marina": {
+        "technique": 9,
+        "show": 9,
+        "musicality": 8.9,
+        "image": 10
+      }
+    },
+    "p-141": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 7.9,
+        "musicality": 7.5,
+        "image": 7
+      },
+      "judge-kate": {
+        "technique": 7,
+        "show": 8,
+        "musicality": 6.6,
+        "image": 7.7
+      },
+      "judge-marina": {
+        "technique": 9,
+        "show": 9,
+        "musicality": 9,
+        "image": 9.2
+      }
+    },
+    "p-180": {
+      "judge-leyla": {
+        "technique": 8.4,
+        "show": 7,
+        "musicality": 7.2,
+        "image": 8
+      },
+      "judge-kate": {
+        "technique": 8.8,
+        "show": 7,
+        "musicality": 8.5,
+        "image": 8.3
+      },
+      "judge-marina": {
+        "technique": 9.2,
+        "show": 9,
+        "musicality": 9,
+        "image": 9
+      }
+    },
+    "p-196": {
+      "judge-leyla": {
+        "technique": 6,
+        "show": 7.8,
+        "musicality": 6,
+        "image": 7
+      },
+      "judge-kate": {
+        "technique": 7.4,
+        "show": 7.8,
+        "musicality": 7.6,
+        "image": 8.1
+      },
+      "judge-marina": {
+        "technique": 7.8,
+        "show": 8.5,
+        "musicality": 7.9,
+        "image": 8.4
+      }
+    },
+    "p-198": {
+      "judge-leyla": {
+        "technique": 8.8,
+        "show": 8,
+        "musicality": 8.7,
+        "image": 7
+      },
+      "judge-kate": {
+        "technique": 8,
+        "show": 9,
+        "musicality": 8.5,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 9,
+        "show": 9,
+        "musicality": 9,
+        "image": 9
+      }
+    },
+    "p-208": {
+      "judge-leyla": {
+        "technique": 7.7,
+        "show": 9,
+        "musicality": 7.8,
+        "image": 9.7
+      },
+      "judge-kate": {
+        "technique": 8.8,
+        "show": 9.5,
+        "musicality": 8.7,
+        "image": 10
+      },
+      "judge-marina": {
+        "technique": 9.7,
+        "show": 10,
+        "musicality": 9.5,
+        "image": 10
+      }
+    },
+    "p-220": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 10,
+        "musicality": 6.8,
+        "image": 10
+      },
+      "judge-kate": {
+        "technique": 6,
+        "show": 10,
+        "musicality": 5,
+        "image": 9.8
+      },
+      "judge-marina": {
+        "technique": 8.8,
+        "show": 10,
+        "musicality": 8.9,
+        "image": 10
+      }
+    },
+    "p-229": {
+      "judge-leyla": {
+        "technique": 5,
+        "show": 6,
+        "musicality": 5,
+        "image": 7.9
+      },
+      "judge-kate": {
+        "technique": 5,
+        "show": 5.5,
+        "musicality": 5.4,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 8.5,
+        "show": 7.8,
+        "musicality": 8.2,
+        "image": 9
+      }
+    },
+    "p-235": {
+      "judge-leyla": {
+        "technique": 5.9,
+        "show": 7,
+        "musicality": 7,
+        "image": 8
+      },
+      "judge-kate": {
+        "technique": 7.6,
+        "show": 7.8,
+        "musicality": 7,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 7.7,
+        "show": 7.8,
+        "musicality": 8,
+        "image": 8.6
+      }
+    },
+    "p-242": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 9,
+        "musicality": 7.5,
+        "image": 8
+      },
+      "judge-kate": {
+        "technique": 8.5,
+        "show": 8.6,
+        "musicality": 8.9,
+        "image": 9
+      },
+      "judge-marina": {
+        "technique": 9,
+        "show": 9,
+        "musicality": 9,
+        "image": 9
+      }
+    },
+    "p-259": {
+      "judge-leyla": {
+        "technique": 8.5,
+        "show": 8,
+        "musicality": 7.7,
+        "image": 6.9
+      },
+      "judge-kate": {
+        "technique": 8,
+        "show": 8.2,
+        "musicality": 8,
+        "image": 6.2
+      },
+      "judge-marina": {
+        "technique": 9,
+        "show": 8.7,
+        "musicality": 9.2,
+        "image": 9
+      }
+    },
+    "p-265": {
+      "judge-leyla": {
+        "technique": 6.5,
+        "show": 9,
+        "musicality": 6.8,
+        "image": 7
+      },
+      "judge-kate": {
+        "technique": 8,
+        "show": 8.5,
+        "musicality": 7,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 8,
+        "show": 9.3,
+        "musicality": 9,
+        "image": 9.7
+      }
+    },
+    "p-274": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 7.9,
+        "musicality": 6,
+        "image": 8
+      },
+      "judge-kate": {
+        "technique": 7.9,
+        "show": 7.5,
+        "musicality": 6.8,
+        "image": 7
+      },
+      "judge-marina": {
+        "technique": 8.7,
+        "show": 9,
+        "musicality": 8.8,
+        "image": 9
+      }
+    },
+    "p-302": {
+      "judge-leyla": {
+        "technique": 6,
+        "show": 8,
+        "musicality": 8.5,
+        "image": 8.5
+      },
+      "judge-kate": {
+        "technique": 6.9,
+        "show": 8,
+        "musicality": 7.7,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 8.9,
+        "show": 9,
+        "musicality": 9,
+        "image": 9
+      }
+    },
+    "p-309": {
+      "judge-leyla": {
+        "technique": 7,
+        "show": 7,
+        "musicality": 6.7,
+        "image": 7.9
+      },
+      "judge-kate": {
+        "technique": 7.9,
+        "show": 6.3,
+        "musicality": 7.2,
+        "image": 7
+      },
+      "judge-marina": {
+        "technique": 9.1,
+        "show": 8,
+        "musicality": 9,
+        "image": 9.5
+      }
+    },
+    "p-211": {
+      "judge-leyla": {
+        "technique": 6,
+        "show": 6.5,
+        "musicality": 4,
+        "image": 8.9
+      },
+      "judge-kate": {
+        "technique": 6.6,
+        "show": 7.3,
+        "musicality": 5,
+        "image": 8
+      },
+      "judge-marina": {
+        "technique": 7.8,
+        "show": 8,
+        "musicality": 7.5,
+        "image": 7.5
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "tournament": {
+    "id": "femme-fest-2026-05-10-strip-beginners",
+    "name": "FEMME FEST",
+    "date": "2026-05-10",
+    "dateLabel": "10.05.2026",
+    "category": "Strip / Solo / Adults (15+ років) / Beginners - Strip",
+    "discipline": "Strip",
+    "format": "Solo",
+    "ageGroup": "Adults (15+ років)",
+    "level": "Beginners",
+    "headOfScoringCommission": "Костенко Владислав",
+    "participantCount": 10,
+    "studioCount": 4,
+    "cityCount": 8,
+    "sourcePdf": "Протокол_Strip_Solo_Adults_15_років_Beginners_Strip.pdf",
+    "locale": "uk"
+  },
+  "criteria": [
+    { "id": "technique", "label": "Техніка" },
+    { "id": "show", "label": "Шоу" },
+    { "id": "musicality", "label": "Музичність" },
+    { "id": "image", "label": "Образ" }
+  ],
+  "judges": [
+    { "id": "judge-leyla", "name": "Лейла" },
+    { "id": "judge-kate", "name": "Kate Gladkova" },
+    { "id": "judge-marina", "name": "Marina" }
+  ],
+  "participants": [
+    { "id": "p-35", "name": "Шульга Валерія" },
+    { "id": "p-82", "name": "Блінова Злата" },
+    { "id": "p-107", "name": "Білоус Поліна" },
+    { "id": "p-172", "name": "Ільченко Альбіна (To Need You)" },
+    { "id": "p-240", "name": "Радзієвська Альвіна" },
+    { "id": "p-244", "name": "Лавровська Софія" },
+    { "id": "p-246", "name": "Рощукіна Тетяна" },
+    { "id": "p-251", "name": "Kryvosheina Yana" },
+    { "id": "p-273", "name": "Слєпуха Олена" },
+    { "id": "p-303", "name": "Гринь Данило" }
+  ],
+  "scores": {
+    "p-35": {
+      "judge-leyla": { "technique": 5, "show": 5, "musicality": 5, "image": 7 },
+      "judge-kate": { "technique": 4.3, "show": 5, "musicality": 4, "image": 3.6 },
+      "judge-marina": { "technique": 7.3, "show": 7, "musicality": 7, "image": 7.5 }
+    },
+    "p-82": {
+      "judge-leyla": { "technique": 6.8, "show": 6, "musicality": 7, "image": 6.5 },
+      "judge-kate": { "technique": 7.2, "show": 6.3, "musicality": 7, "image": 7 },
+      "judge-marina": { "technique": 9.2, "show": 8, "musicality": 8, "image": 8.2 }
+    },
+    "p-107": {
+      "judge-leyla": { "technique": 5, "show": 5, "musicality": 4, "image": 5 },
+      "judge-kate": { "technique": 6.5, "show": 5.8, "musicality": 5, "image": 6 },
+      "judge-marina": { "technique": 7.7, "show": 8, "musicality": 7.2, "image": 8 }
+    },
+    "p-172": {
+      "judge-leyla": { "technique": 4, "show": 4, "musicality": 4, "image": 7 },
+      "judge-kate": { "technique": 4.4, "show": 6, "musicality": 5.8, "image": 7 },
+      "judge-marina": { "technique": 7.8, "show": 7.8, "musicality": 7.7, "image": 8 }
+    },
+    "p-240": {
+      "judge-leyla": { "technique": 4.5, "show": 6, "musicality": 5, "image": 7.5 },
+      "judge-kate": { "technique": 4.8, "show": 5, "musicality": 5, "image": 6 },
+      "judge-marina": { "technique": 6.7, "show": 7, "musicality": 6.8, "image": 7 }
+    },
+    "p-244": {
+      "judge-leyla": { "technique": 8, "show": 8, "musicality": 7, "image": 8.5 },
+      "judge-kate": { "technique": 7.3, "show": 7, "musicality": 7.4, "image": 7.5 },
+      "judge-marina": { "technique": 9, "show": 8.5, "musicality": 8.7, "image": 8 }
+    },
+    "p-246": {
+      "judge-leyla": { "technique": 5, "show": 7, "musicality": 6, "image": 8.3 },
+      "judge-kate": { "technique": 5.9, "show": 7, "musicality": 5.6, "image": 7 },
+      "judge-marina": { "technique": 9, "show": 8.8, "musicality": 9, "image": 9 }
+    },
+    "p-251": {
+      "judge-leyla": { "technique": 6, "show": 5, "musicality": 6, "image": 8 },
+      "judge-kate": { "technique": 6.8, "show": 6.7, "musicality": 6, "image": 7.7 },
+      "judge-marina": { "technique": 8, "show": 9, "musicality": 7.5, "image": 9 }
+    },
+    "p-273": {
+      "judge-leyla": { "technique": 6.9, "show": 7.5, "musicality": 5.9, "image": 7.9 },
+      "judge-kate": { "technique": 6.5, "show": 7, "musicality": 6, "image": 6 },
+      "judge-marina": { "technique": 8, "show": 8, "musicality": 8, "image": 8 }
+    },
+    "p-303": {
+      "judge-leyla": { "technique": 6.9, "show": 8, "musicality": 6.9, "image": 7.9 },
+      "judge-kate": { "technique": 6.7, "show": 7, "musicality": 6.6, "image": 7 },
+      "judge-marina": { "technique": 8.8, "show": 8, "musicality": 9, "image": 8.5 }
+    }
+  }
+}

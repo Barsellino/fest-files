@@ -1,0 +1,32 @@
+{
+  "tournament": {
+    "id": "empty",
+    "name": "—",
+    "date": null,
+    "dateLabel": null,
+    "category": "",
+    "discipline": "",
+    "format": "",
+    "ageGroup": "",
+    "level": "",
+    "headOfScoringCommission": "",
+    "participantCount": 0,
+    "studioCount": 0,
+    "cityCount": 0,
+    "sourcePdf": "",
+    "locale": "uk"
+  },
+  "criteria": [
+    { "id": "technique", "label": "Техніка" },
+    { "id": "show", "label": "Шоу" },
+    { "id": "musicality", "label": "Музичність" },
+    { "id": "image", "label": "Образ" }
+  ],
+  "judges": [
+    { "id": "judge-leyla", "name": "Лейла" },
+    { "id": "judge-kate", "name": "Kate Gladkova" },
+    { "id": "judge-marina", "name": "Marina" }
+  ],
+  "participants": [],
+  "scores": {}
+}
