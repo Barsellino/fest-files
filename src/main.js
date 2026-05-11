@@ -11,6 +11,10 @@ app.use(createPinia())
 app.use(PrimeVue, {
   theme: {
     preset: Aura,
+    // Не слідувати системній темній темі (інакше компоненти темні на світлому фоні).
+    options: {
+      darkModeSelector: '.app-use-dark-prime',
+    },
   },
 })
 

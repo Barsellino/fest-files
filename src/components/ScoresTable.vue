@@ -1,8 +1,7 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
-import Fieldset from 'primevue/fieldset'
 import Checkbox from 'primevue/checkbox'
 import { storeToRefs } from 'pinia'
 import { useScoringStore } from '../stores/scoring.js'
@@ -16,31 +15,42 @@ const { tableRows, allJudgesSelected, allCriteriaSelected } =
 
 const isCompactTable = ref(false)
 
-const judgesCollapsed = ref(false)
-const criteriaCollapsed = ref(false)
+/** Нативні <details> — надійні на мобільних (PrimeVue Fieldset + transition часто глючить у Safari). */
+const judgesDetails = ref(null)
+const criteriaDetails = ref(null)
 
 let mq
-let mqApply
+let removeMqListener
+
+function syncDetailsToViewport() {
+  if (!mq) return
+  const narrow = mq.matches
+  isCompactTable.value = narrow
+  const openWide = !narrow
+  if (judgesDetails.value) judgesDetails.value.open = openWide
+  if (criteriaDetails.value) criteriaDetails.value.open = openWide
+}
 
 onMounted(() => {
   mq = window.matchMedia('(max-width: 640px)')
-  mqApply = () => {
-    const narrow = mq.matches
-    isCompactTable.value = narrow
-    if (narrow) {
-      judgesCollapsed.value = true
-      criteriaCollapsed.value = true
-    } else {
-      judgesCollapsed.value = false
-      criteriaCollapsed.value = false
-    }
+
+  const onMqChange = () => {
+    void nextTick(syncDetailsToViewport)
   }
-  mqApply()
-  mq.addEventListener('change', mqApply)
+
+  void nextTick(syncDetailsToViewport)
+
+  if (typeof mq.addEventListener === 'function') {
+    mq.addEventListener('change', onMqChange)
+    removeMqListener = () => mq.removeEventListener('change', onMqChange)
+  } else if (typeof mq.addListener === 'function') {
+    mq.addListener(onMqChange)
+    removeMqListener = () => mq.removeListener(onMqChange)
+  }
 })
 
 onUnmounted(() => {
-  if (mq && mqApply) mq.removeEventListener('change', mqApply)
+  removeMqListener?.()
 })
 
 function onJudgeCheck(judgeId, value) {
@@ -67,69 +77,71 @@ function onSelectAllCriteria(value) {
 <template>
   <div class="scores-wrap">
     <div class="filters-grid">
-      <Fieldset
-        v-model:collapsed="judgesCollapsed"
-        legend="Судді в підсумку"
-        toggleable
-        class="block-panel"
-      >
-        <p class="hint">
-          Підсумок враховує лише позначених суддів і критерії з сусіднього блоку.
-          Без суддів — усі бали в таблиці нулі.
-        </p>
-        <div class="select-all-row">
-          <Checkbox
-            input-id="judges-select-all"
-            binary
-            :model-value="allJudgesSelected"
-            @update:model-value="onSelectAllJudges"
-          />
-          <label class="select-all-label" for="judges-select-all">Обрати всіх</label>
-        </div>
-        <ul class="check-list">
-          <li v-for="j in judges" :key="j.id" class="check-row">
+      <details ref="judgesDetails" class="block-panel filter-details">
+        <summary class="filter-details__summary">
+          <span class="filter-details__chevron" aria-hidden="true" />
+          <span class="filter-details__title">Судді в підсумку</span>
+        </summary>
+        <div class="filter-details__body">
+          <p class="hint">
+            Підсумок враховує лише позначених суддів і критерії з сусіднього блоку.
+            Без суддів — усі бали в таблиці нулі.
+          </p>
+          <div class="select-all-row">
             <Checkbox
-              :input-id="'judge-' + j.id"
+              input-id="judges-select-all"
               binary
-              :model-value="scoring.isJudgeSelected(j.id)"
-              @update:model-value="(v) => onJudgeCheck(j.id, v)"
+              :model-value="allJudgesSelected"
+              @update:model-value="onSelectAllJudges"
             />
-            <label class="row-label" :for="'judge-' + j.id">{{ j.name }}</label>
-          </li>
-        </ul>
-      </Fieldset>
+            <label class="select-all-label" for="judges-select-all">Обрати всіх</label>
+          </div>
+          <ul class="check-list">
+            <li v-for="j in judges" :key="j.id" class="check-row">
+              <Checkbox
+                :input-id="'judge-' + j.id"
+                binary
+                :model-value="scoring.isJudgeSelected(j.id)"
+                @update:model-value="(v) => onJudgeCheck(j.id, v)"
+              />
+              <label class="row-label" :for="'judge-' + j.id">{{ j.name }}</label>
+            </li>
+          </ul>
+        </div>
+      </details>
 
-      <Fieldset
-        v-model:collapsed="criteriaCollapsed"
-        legend="Критерії в підсумку"
-        toggleable
-        class="block-panel"
-      >
-        <p class="hint">
-          Лише обрані критерії входять у суму. Якщо нічого не позначено — 0
-          балів.
-        </p>
-        <div class="select-all-row">
-          <Checkbox
-            input-id="criteria-select-all"
-            binary
-            :model-value="allCriteriaSelected"
-            @update:model-value="onSelectAllCriteria"
-          />
-          <label class="select-all-label" for="criteria-select-all">Обрати всіх</label>
-        </div>
-        <ul class="check-list">
-          <li v-for="c in criteria" :key="c.id" class="check-row">
+      <details ref="criteriaDetails" class="block-panel filter-details">
+        <summary class="filter-details__summary">
+          <span class="filter-details__chevron" aria-hidden="true" />
+          <span class="filter-details__title">Критерії в підсумку</span>
+        </summary>
+        <div class="filter-details__body">
+          <p class="hint">
+            Лише обрані критерії входять у суму. Якщо нічого не позначено — 0
+            балів.
+          </p>
+          <div class="select-all-row">
             <Checkbox
-              :input-id="'criterion-' + c.id"
+              input-id="criteria-select-all"
               binary
-              :model-value="scoring.isCriterionSelected(c.id)"
-              @update:model-value="(v) => onCriterionCheck(c.id, v)"
+              :model-value="allCriteriaSelected"
+              @update:model-value="onSelectAllCriteria"
             />
-            <label class="row-label" :for="'criterion-' + c.id">{{ c.label }}</label>
-          </li>
-        </ul>
-      </Fieldset>
+            <label class="select-all-label" for="criteria-select-all">Обрати всіх</label>
+          </div>
+          <ul class="check-list">
+            <li v-for="c in criteria" :key="c.id" class="check-row">
+              <Checkbox
+                :input-id="'criterion-' + c.id"
+                binary
+                :model-value="scoring.isCriterionSelected(c.id)"
+                @update:model-value="(v) => onCriterionCheck(c.id, v)"
+              />
+              <label class="row-label" :for="'criterion-' + c.id">{{ c.label }}</label>
+            </li>
+          </ul>
+        </div>
+      </details>
     </div>
 
     <div class="table-shell">
@@ -181,24 +193,59 @@ function onSelectAllCriteria(value) {
   }
 }
 
-.block-panel {
+/* Нативні акордеони: без overflow:hidden (на iOS інколи різали клік по summary) */
+.block-panel.filter-details {
   margin: 0;
   border-radius: 0.875rem;
-  overflow: hidden;
+  border: 1px solid rgba(45, 42, 85, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset;
 }
 
-.block-panel :deep(.p-fieldset-legend) {
+.filter-details__summary {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0.65rem 0.85rem;
+  cursor: pointer;
   font-weight: 600;
   font-size: clamp(0.9rem, 2.2vw, 1rem);
-  padding: 0.25rem 0.35rem;
+  color: #2d2a55;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.block-panel :deep(.p-fieldset-toggle-button) {
-  margin-inline-end: 0.25rem;
+.filter-details__summary::-webkit-details-marker {
+  display: none;
 }
 
-.block-panel :deep(.p-fieldset-content-container) {
-  padding: 0.125rem 0.125rem 0.35rem;
+.filter-details__title {
+  flex: 1;
+  text-align: left;
+}
+
+.filter-details__chevron {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.05rem;
+  border-right: 2px solid #6366f1;
+  border-bottom: 2px solid #6366f1;
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+
+.filter-details[open] .filter-details__chevron {
+  transform: rotate(225deg);
+  margin-top: 0.2rem;
+}
+
+.filter-details__body {
+  padding: 0.125rem 0.85rem 0.65rem;
 }
 
 .hint {
